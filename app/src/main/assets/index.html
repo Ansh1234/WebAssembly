@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+</head>
+<body>
+
+<script src='./lib.js'></script>
+<script>
+      const { isLimitReached } = wasm_bindgen;
+      async function run() {
+        console.time("loading wasm file");
+        await wasm_bindgen('./lib_bg.wasm');
+        console.timeEnd("loading wasm file");
+      }
+      run();
+</script>
+</body>
+</html>
+
+
